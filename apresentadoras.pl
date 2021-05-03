@@ -148,9 +148,9 @@ solucao(ListaSolucao) :-
     todosDiferentes([Horario1, Horario2, Horario3, Horario4, Horario5]),
     
     idade(Idade1), idade(Idade2), idade(Idade3), idade(Idade4), idade(Idade5),
-    todosDiferentes([Idade1, Idade2, Idade3, Idade4, Idade5]).
+    todosDiferentes([Idade1, Idade2, Idade3, Idade4, Idade5]),
 
     signo(signo1), signo(signo2), signo(signo3), signo(signo4), signo(signo5),
-    todosDiferentes([signo1, signo2, signo3, signo4, signo5]).
+    todosDiferentes([Signo1, Signo2, Signo3, Signo4, Signo5]).
     
     
