@@ -70,8 +70,8 @@ solucao(ListaSolucao) :-
     aoLado(apresentadora(_, cintia, _, _, _, _), apresentadora(_, _, _, 18, _, _), ListaSolucao),
     
     %A mulher de 45 anos está em algum lugar entre a mulher de 50 anos e a mulher de 40 anos, nessa ordem.
+    aEsquerda(apresentadora(_, _, _, _, 50, _), apresentadora(_, _, _, _, 45, _), ListaSolucao),
     aEsquerda(apresentadora(_, _, _, _, 45, _), apresentadora(_, _, _, _, 40, _), ListaSolucao),
-    aEsquerda(apresentadora(_, _, _, _, 40, _), apresentadora(_, _, _, _, 45, _), ListaSolucao),
     
     %A mulher de Verde está em algum lugar à esquerda da apresentadora do signo de Câncer.
     aEsquerda(apresentadora(verde, _, _, _, _, _), apresentadora(_, _, _, _, _, cancer), ListaSolucao),
@@ -80,8 +80,8 @@ solucao(ListaSolucao) :-
     aoLado(apresentadora(_, _, humor, _, _, _), apresentadora(_, _, _, _, 40, _), ListaSolucao),
     
     %A mulher de Amarelo está em algum lugar entre a apresentadora das 20 horas e a Rebeca, nessa ordem.
-    aEsquerda(apresentadora(amarelo, _, _, _, _, _), apresentadora(_, rebeca, _, _, _, _), ListaSolucao),
     aEsquerda(apresentadora(_, _, _, 20, _, _), apresentadora(amarelo, _, _, _, _, _), ListaSolucao),
+    aEsquerda(apresentadora(amarelo, _, _, _, _, _), apresentadora(_, rebeca, _, _, _, _), ListaSolucao),
     
     %Renata está ao lado da mulher mais velha.
     aoLado(apresentadora(_, renata, _, _, _, _), apresentadora(_, _, _, _, 55, _), ListaSolucao),
@@ -150,7 +150,7 @@ solucao(ListaSolucao) :-
     idade(Idade1), idade(Idade2), idade(Idade3), idade(Idade4), idade(Idade5),
     todosDiferentes([Idade1, Idade2, Idade3, Idade4, Idade5]),
 
-    signo(signo1), signo(signo2), signo(signo3), signo(signo4), signo(signo5),
+    signo(Signo1), signo(Signo2), signo(Signo3), signo(Signo4), signo(Signo5),
     todosDiferentes([Signo1, Signo2, Signo3, Signo4, Signo5]).
     
     
