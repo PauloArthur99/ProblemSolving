@@ -42,13 +42,6 @@ aoLado(X,Y,Lista) :- nextto(X,Y,Lista);nextto(Y,X,Lista).
 aEsquerda(X,Y,Lista) :- nth0(IndexX,Lista,X), 
                         nth0(IndexY,Lista,Y), 
                         IndexX < IndexY.
-                        
-%X está à direita de Y (em qualquer posição à direita)
-aDireita(X,Y,Lista) :- aEsquerda(Y,X,Lista). 
-
-%X está no canto se ele é o primeiro ou o último da lista
-noCanto(X,Lista) :- last(Lista,X).
-noCanto(X,[X|_]).
 
 todosDiferentes([]).
 todosDiferentes([H|T]) :- not(member(H,T)), todosDiferentes(T).
